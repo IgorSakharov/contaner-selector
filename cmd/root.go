@@ -20,13 +20,15 @@ var (
 	command  string
 	noPrompt bool
 	filter   string
+	version  = "1.0.0"
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "container-selector",
-	Short: "Select and connect to a Docker container",
-	Long:  `A simple tool to interactively select a running Docker container and execute a command in it.`,
-	RunE:  run,
+	Use:     "container-selector",
+	Short:   "Select and connect to a Docker container",
+	Long:    `A simple tool to interactively select a running Docker container and execute a command in it.`,
+	Version: version,
+	RunE:    run,
 }
 
 func init() {
